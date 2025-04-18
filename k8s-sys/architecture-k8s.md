@@ -5,7 +5,7 @@ Kubernetes follows client-server architecture where the Master Node and Worker n
 We can have multiple worker nodes and Master nodes according to the requirement.
 
 
-![Image](https://github.com/user-attachments/assets/3c4cf77f-6fc8-4c50-acb5-3f15cc1a3241)
+![Image](https://github.com/user-attachments/assets/9cb9b0dc-0722-4d3d-a72e-070ad309e9e1)
 
 
 ### Master Node :-
