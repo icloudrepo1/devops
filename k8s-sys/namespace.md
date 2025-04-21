@@ -40,9 +40,41 @@ Kubernetes starts with some built-in namespaces like.
 
 
 
+### Namespace Commands
 
 
+1. List all namespaces
+
+```
+kubectl get namespaces
+```
 
 
+2. Create a new namespace
+
+```
+kubectl create namespace <name>
+```
+
+
+3. Show details about a namespace
+
+```
+kubectl describe namespace <name>
+```
+
+
+4. Delete a namespace
+
+```
+kubectl delete namespace <name>
+```
+
+
+5. Set default namespace for your current kubectl session
+
+```
+kubectl config set-context --current --namespace=<name>
+```
 
 
