@@ -1,4 +1,4 @@
-## what is namespace ?
+## What is namespace ?
 
 
 In Kubernetes (k8s), a Namespace is basically a way to divide cluster resources between multiple users or projects.
@@ -78,3 +78,4 @@ kubectl config set-context --current --namespace=<name>
 ```
 
 
+=========END===========================
