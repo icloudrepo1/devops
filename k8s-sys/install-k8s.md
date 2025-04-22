@@ -224,6 +224,7 @@ sudo reboot
 ```bash
 sudo kubectl delete node <worker_node-1_ip>
 ```
+`ex- kubectl delete node ip-172-31-36-1`   ===>  worker-1-pvt-ip
 
 ```bash
 sudo kubectl get nodes
