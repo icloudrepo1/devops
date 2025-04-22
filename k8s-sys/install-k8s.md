@@ -92,6 +92,8 @@ Using KUBEADM
 
 ## 1. Execute on Both "Master" & "Worker Node"
 
+#### NB= `https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/`
+
 Run the following commands on both the master and worker nodes to prepare them for kubeadm.
 
 ```bash
