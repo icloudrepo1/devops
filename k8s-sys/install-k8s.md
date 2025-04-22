@@ -218,13 +218,13 @@ sudo hostnamectl set-hostname worker-1
 sudo reboot
 ```
 
-#### 3. Go to Master node and delete existing worker_node-1 ( ip add-type )
+#### 3. Go to Master node and delete existing worker_node-1 ( system name )
 
 
 ```bash
-sudo kubectl delete node <worker_node-1_ip>
+sudo kubectl delete node <worker_node-1_name>
 ```
-`ex- kubectl delete node ip-172-31-36-1`   ===>  worker-1-pvt-ip
+ex- kubectl delete node `ip-172-31-36-1`   ===>  worker-1-name-LIKE THIS👈👈
 
 ```bash
 sudo kubectl get nodes
