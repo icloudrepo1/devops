@@ -81,3 +81,110 @@ kubectl get pods
 kubectl get pod pod1 -o wide
 
 ```
+
+
+
+### How to create pod inside custom namespace ?
+
+
+##### step-1 :- List all namespaces and if no custom namespaces there , then you create a custom namespaces
+
+
+A. verify all namespaces
+
+
+```
+kubectl get namespaces
+```
+
+OR
+
+```
+kubectl get ns
+```
+
+
+B. Create a new custom namespace
+
+
+```
+kubectl create namespace <name>
+```
+
+
+##### step-2 :- create yaml file for pod create
+
+
+```bash
+vi mypodcrt.yml
+```
+
+
+##### step-3 :- use below command for pod create
+
+
+`A. If it is kubeadm then👇👇`
+
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+  namespace: <namespacename>
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: worker-1
+  containers:
+    - name: container1
+      image: nginx
+      ports:
+        - containerPort: 80
+
+```
+
+
+`B. If it is minikube then👇👇`
+
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+  namespace: <namespacename>
+spec:
+  containers:
+  - name: container1
+    image: nginx
+    ports:
+    - containerPort: 80
+
+```
+
+
+##### step-4 :- apply the manifest file(mypodcrt.yml) to create the pod
+
+
+```
+kubectl apply -f mypodcrt.yml
+```
+
+
+##### step-5 :- verify the pod's status
+
+
+```
+kubectl get pods
+```
+
+##### step-6 :- to verify pod's detail info
+
+
+```
+kubectl get pod pod1 -o wide
+
+```
+
+
+=======END===========
