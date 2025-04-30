@@ -74,7 +74,7 @@ kubectl apply -f mypodcrt.yml
 kubectl get pods
 ```
 
-OR
+##### step-5 :- to verify pod's detail info
 
 
 ```
