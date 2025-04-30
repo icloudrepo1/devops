@@ -49,6 +49,12 @@ Kubernetes starts with some built-in namespaces like.
 kubectl get namespaces
 ```
 
+OR
+
+```
+kubectl get ns
+```
+
 
 2. Create a new namespace
 
