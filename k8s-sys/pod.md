@@ -3,30 +3,19 @@
 
 Kubernetes doesn't manage containers directly—it manages pods. 
 
-A Kubernetes (k8s) pod is the smallest and simplest unit in the Kubernetes object model that you can create or deploy. 
-
-A pod represents a single instance of a running process in your cluster.
-
-A pod is a core concept in Kubernetes (k8s) and represents the smallest deployable unit that you can create and manage.
+A Kubernetes (k8s) pod is the smallest and simplest unit in the Kubernetes object model that you can create or deploy and manage.
 
 A pod is a wrapper around one or more containers (usually Docker containers) that are deployed together on the same host, share the same network and storage, and are treated as a single unit.
 
+A pod can run a single container or multiple tightly coupled containers that share the same resources.
 
-Single IP address :- All containers in a pod share the same IP and port space.
+Pods are ephemeral. If a pod dies, Kubernetes can automatically create a new pod, but it will be a new instance with a different IP.
 
-Shared storage :- Pods can mount shared volumes.
+All containers in a pod share the same IP and port space.
 
-Shared lifecycle :- Containers in a pod are started, stopped, and managed together.
+Containers in a pod are started, stopped, and managed together.
 
-One or More Containers: A pod can run a single container or multiple tightly coupled containers that share the same resources.
 
-Shared Resources: Containers in the same pod share:
-
-Network namespace (IP address, port space)
-
-Storage volumes
-
-Lifecycle Management: Pods are ephemeral. If a pod dies, Kubernetes can automatically create a new pod, but it will be a new instance with a different IP.
 ### How to create pod inside default namespace ?
 
 
