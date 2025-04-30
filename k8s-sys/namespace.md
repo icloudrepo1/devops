@@ -77,11 +77,18 @@ kubectl delete namespace <name>
 ```
 
 
-5. Set default namespace for your current kubectl session
+5. How to set/switch to namespace(default/custom) for your current kubectl session
 
 ```
 kubectl config set-context --current --namespace=<name>
 ```
+
+6. How to check what is your current namespace
+
+```
+kubectl config view --minify --output 'jsonpath={..namespace}'
+```
+
 
 
 =========END===========================
