@@ -1,4 +1,4 @@
-## what is k8s deployment ?
+![image](https://github.com/user-attachments/assets/277a0a43-57fb-45a7-b5df-e662624c032c)## what is k8s deployment ?
 
 
 A k8s deployment provides a declarative way to define and manage the desired state of your application.
@@ -77,6 +77,30 @@ spec:
         - containerPort: 3000
 
 ```
+
+`NB`
+
+apiVersion and kind tell Kubernetes that is a Deployment.
+
+metadata includes the name "reddit-clone-deployment" and labels to identify the app as "reddit-clone". 
+
+spec.replicas  says we want 3 copies (replicas) of our app running.
+
+spec.selector  helps the ReplicaSet know which Pods to manage.
+
+matchLabels  says to find Pods with the label " app: reddit-clone ".
+
+spec.template  defines how the Pods look. 
+
+metadata.labels  sets the label " app: reddit-clone " for the Pods.
+
+spec.containers  lists what runs inside each Pod.
+
+name  is " reddit-clone " for the container.
+
+image  specifies the container image to use.
+
+ports  tell's Kubernetes that the app inside the container listens on port 8000.
 
 
 
