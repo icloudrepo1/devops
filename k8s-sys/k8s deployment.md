@@ -139,3 +139,36 @@ kubectl apply -f mydeployment.yml
 ```
 
 
+##### step-4 :- check the deployment
+
+
+```
+kubectl get deployments
+```
+
+
+##### step-5 :- check the pods status
+
+
+```
+kubectl get pods
+```
+
+OPTIONALS :-
+==================
+
+
+##### step-6 :- check the pods detailed info
+
+
+```
+kubectl describe pod <pod-name>
+```
+
+
+##### step-7 :- check logs from a pod
+
+
+```
+kubectl logs pod <pod-name>
+```
