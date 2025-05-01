@@ -84,20 +84,50 @@ spec:
 
 `kind: Deployment`  = type of k8s object
 
-`metadata:
-  name: reddit-clone-deployment
+```
+metadata:
+  name: mynginx-deployment
   labels:
-    app: myapp`
+    app: myapp
+```
 
 metadata provides a name for the deployment and labels for identifying and grouping resources.
 
-`spec:
-  replicas: 3`
-
+```
+spec:
+  replicas: 3
+```
 it specifies the desired no of pod replicas
 
 
+```
+selector:
+    matchLabels:
+      app: myapp
+```
+selector matches the pods with specified label
 
+
+```
+template:
+    metadata:
+      labels:
+        app: myapp
+```
+
+the template defines the pod specification, including labels that match the selector
+
+
+```
+spec:
+      containers:
+      - name: appcontainer
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+```
+
+define the container inside each pod, name= here container name, image= docker container create image, ports= exposes port 80 inside the container
 
 
 
