@@ -59,22 +59,22 @@ kind: Deployment
 metadata:
   name: reddit-clone-deployment
   labels:
-    app: reddit-clone
+    app: myapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: reddit-clone
+      app: myapp
   template:
     metadata:
       labels:
-        app: reddit-clone
+        app: myapp
     spec:
       containers:
-      - name: reddit-clone
-        image: urdevops/reddit-clone
+      - name: appcontainer
+        image: nginx:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 80
 
 ```
 
