@@ -37,3 +37,55 @@ They also provide features like auto-scaling and auto-healing to enhance the ove
 
 
 
+
+### How to create k8s deployment file ?
+
+
+##### step-1 :- create yaml file for deployment
+
+
+```
+vi mydeployment.yml
+```
+
+
+##### step-2 :- use below command for deployment
+`
+
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reddit-clone-deployment
+  labels:
+    app: reddit-clone
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: reddit-clone
+  template:
+    metadata:
+      labels:
+        app: reddit-clone
+    spec:
+      containers:
+      - name: reddit-clone
+        image: urdevops/reddit-clone
+        ports:
+        - containerPort: 3000
+
+```
+
+
+
+
+##### step-3 :- apply the deployment
+
+
+```
+kubectl apply -f mydeployment.yml
+```
+
+
