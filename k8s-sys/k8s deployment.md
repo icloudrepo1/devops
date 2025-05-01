@@ -57,7 +57,7 @@ vi mydeployment.yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reddit-clone-deployment
+  name: mynginx-deployment
   labels:
     app: myapp
 spec:
@@ -80,27 +80,23 @@ spec:
 
 `NB`
 
-apiVersion and kind tell Kubernetes that is a Deployment.
+`apiVersion: apps/v1`  = specify the k8s api version and apps/v1 is the standard for eployments.
 
-metadata includes the name "reddit-clone-deployment" and labels to identify the app as "reddit-clone". 
+`kind: Deployment`  = type of k8s object
 
-spec.replicas  says we want 3 copies (replicas) of our app running.
+`metadata:
+  name: reddit-clone-deployment
+  labels:
+    app: myapp`
 
-spec.selector  helps the ReplicaSet know which Pods to manage.
+metadata provides a name for the deployment and labels for identifying and grouping resources.
 
-matchLabels  says to find Pods with the label " app: reddit-clone ".
+`spec:
+  replicas: 3`
 
-spec.template  defines how the Pods look. 
+it specifies the desired no of pod replicas
 
-metadata.labels  sets the label " app: reddit-clone " for the Pods.
 
-spec.containers  lists what runs inside each Pod.
-
-name  is " reddit-clone " for the container.
-
-image  specifies the container image to use.
-
-ports  tell's Kubernetes that the app inside the container listens on port 8000.
 
 
 
