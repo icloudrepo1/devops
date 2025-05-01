@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/277a0a43-57fb-45a7-b5df-e662624c032c)## what is k8s deployment ?
+## what is k8s deployment ?
 
 
 A k8s deployment provides a declarative way to define and manage the desired state of your application.
