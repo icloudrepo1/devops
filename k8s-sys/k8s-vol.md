@@ -99,3 +99,66 @@ kubectl get pvc
 ```
 kubectl describe pvc my-pvc
 ```
+
+
+##### step-9 :- Use pvc in a pod
+
+
+`vi mypvcuse.yml`
+
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pvc-use-pod
+spec:
+  containers:
+  - name: cont1
+    image: nginx:latest
+    command: [ "sh", "-c", "echo 'hii all i m ram' > /data/mydata.txt && sleep 3600" ]
+    volumeMounts:
+    - mountPath: /data
+      name: my-datastorage
+  volumes:
+  - name: my-datastorage
+    persistentVolumeClaim:
+      claimName: my-pvc
+
+```
+
+
+##### step-10 :- apply pvc in a pod create file
+
+
+```
+kubectl apply -f mypvcuse.yml
+```
+
+##### step-11 :- verify pvc is mounted (inside pod)
+
+
+```
+kubectl get pod pvc-use-pod
+```
+
+##### step-12 :- go inside pod and check your data
+
+
+```
+kubectl exec -it pvc-use-pod -- sh
+```
+
+```
+cat /data/mydata.txt
+```
+
+OR
+
+```
+cd data/
+```
+
+```
+cat mydata.txt
+```
