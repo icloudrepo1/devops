@@ -27,3 +27,6 @@ what is pod ?
 
 
 what is deployment ?
+
+
+what is k8s volume ?
