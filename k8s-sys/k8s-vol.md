@@ -42,8 +42,21 @@ spec:
 kubectl apply -f ourpv.yml
 ```
 
+##### step-3 :- check persistent volume(pv) status
 
-##### step-3 :- create a persistent volume claim(pvc)
+
+```
+kubectl get pv
+```
+
+##### step-4 :- check persistent volume(pv) detailed info
+
+
+```
+kubectl describe pv my-pv
+```
+
+##### step-5 :- create a persistent volume claim(pvc)
 
 
 `vi ourpvc.yml`
@@ -64,9 +77,25 @@ spec:
 ```
 
 
-##### step-4 :- apply persistent volume claim(pvc)
+##### step-6 :- apply persistent volume claim(pvc)
 
 
 ```
 kubectl apply -f ourpvc.yml
+```
+
+
+##### step-7 :- check persistent volume claim(pvc) status
+
+
+```
+kubectl get pvc
+```
+
+
+##### step-8 :- check persistent volume claim(pvc) detailed info
+
+
+```
+kubectl describe pvc my-pvc
 ```
