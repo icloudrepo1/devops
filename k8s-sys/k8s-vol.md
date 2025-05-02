@@ -43,3 +43,30 @@ kubectl apply -f ourpv.yml
 ```
 
 
+##### step-3 :- create a persistent volume claim(pvc)
+
+
+`vi ourpvc.yml`
+
+
+```
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests: 
+      storage: 300Mi
+
+```
+
+
+##### step-4 :- apply persistent volume claim(pvc)
+
+
+```
+kubectl apply -f ourpvc.yml
+```
