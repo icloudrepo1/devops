@@ -259,3 +259,44 @@ cd data/
 ```
 cat mydata.txt
 ```
+
+
+
+### how to delete k8s-volume
+
+
+##### step-1 :- delete the pod first
+
+
+```
+kubectl delete pod pvc-use-pod
+```
+
+```
+kubectl get pod
+```
+
+##### step-2 :- delete the pvc
+
+
+```
+kubectl delete pvc my-pvc
+```
+
+```
+kubectl get pvc
+```
+
+##### step-3 :- delete the pv now
+
+
+```
+kubectl delete pv my-pv
+```
+
+```
+kubectl get pv
+```
+
+
+=========END=============
