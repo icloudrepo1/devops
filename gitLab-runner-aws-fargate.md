@@ -16,12 +16,14 @@ AWS CLI + Docker installed locally
 
 #### Step 1 - Get GitLab Runner Registration Token
 
-Go to your GitLab project.
+Log in to your GitLab account and open your project.
 
-Navigate to Settings > CI/CD > Runners.
+In the left sidebar, go to:
 
-Expand Set up a specific Runner manually.
+  - Settings > CI/CD
+  - Scroll down to the Runners section.
+  - Under Set up a specific Runner manually, click to expand the section.
+  - You’ll see a field labeled: Registration token
+  - Copy this token — you'll use it to register your runner.
+    
 
-Copy the registration token.
-
-#### 
