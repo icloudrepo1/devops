@@ -121,3 +121,18 @@ DevSecOps helps overcome this by ensuring security is :-
 `DevSecOps :- Let’s release software faster, more reliably, and securely.`
 
 
+```
+
+| Aspect                 | **DevOps**                                             | **DevSecOps**                                                   |
+| ---------------------- | ------------------------------------------------------ | --------------------------------------------------------------- |
+| **Focus**              | Speed, collaboration, automation (Dev + Ops)           | Speed **plus** integrated **security** at every stage           |
+| **Security Role**      | Handled by a separate security team, often at the end  | **Built-in** responsibility for all (Dev, Sec, and Ops teams)   |
+| **Security Timing**    | Added **after** development (reactive)                 | Integrated **from the start** (proactive/“shift-left”)          |
+| **Tools**              | Jenkins, Docker, Kubernetes, Git                       | Includes DevOps tools **plus** SAST, DAST, SCA, IaC scanners    |
+| **Automation**         | Automates build, test, deploy                          | Automates **security testing and compliance checks** too        |
+| **Speed vs. Security** | Prioritizes speed, risk of technical debt              | Balances speed **with security** to reduce long-term risk       |
+| **Feedback Loops**     | Operational feedback (monitoring, errors, performance) | Adds **security feedback** (vulns, misconfigs, compliance gaps) |
+| **Compliance**         | Typically manual, after-the-fact                       | Automated and continuous                                        |
+| **Culture**            | Dev and Ops collaboration                              | Dev, Sec, and Ops collaboration (“security is everyone’s job”)  |
+
+```
