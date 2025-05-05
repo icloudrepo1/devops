@@ -97,6 +97,24 @@ spec:
 kubectl apply -f mywebapp-complete.yml
 ```
 
+### Step 3 :- Verify ConfigMap and Pod
+
+```
+kubectl get pods -n default
+```
+
+```
+kubectl describe pod -l app=my-webapp -n default
+```
+
+```
+kubectl get configmaps
+```
+
+```
+kubectl exec -it my-webapp -- cat /path/to/mounted/config
+```
+
 ##### `NB`
 
 `Why You Need a Service ?`
