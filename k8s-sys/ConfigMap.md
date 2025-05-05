@@ -1,4 +1,4 @@
-## what is ConfigMaps
+## what is ConfigMap
 
 
 In Kubernetes, a ConfigMap is a resource object that allows you to store configuration data separately from your application code. 
