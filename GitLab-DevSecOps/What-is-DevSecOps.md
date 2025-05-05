@@ -1,6 +1,8 @@
 ## What is DevSecOps ?
 
-DevSecOps stands for Development, Security, and Operations. It’s a software development approach that integrates security practices within the DevOps process.
+DevSecOps stands for Development, Security, and Operations. 
+
+It’s a software development approach that integrates security practices within the DevOps process.
 
 It is aiming to build secure software quickly and efficiently without sacrificing speed or quality.
 
@@ -85,4 +87,26 @@ Vulnerability Management: Qualys, Tenable.
 Incident detection and response integrated into ops.
 
 Feedback loops ensure that security findings lead to code fixes or pipeline adjustments.
+
+
+
+### Why It Matters ?
+
+
+Traditional security practices often slow down development. 
+
+DevSecOps helps overcome this by ensuring security is :-
+
+`Faster Delivery` Secure code doesn't slow down release cycles.
+
+`Reduced Costs` Fixing issues early is cheaper than post-deployment.
+
+`Stronger Security Posture` Continuous vigilance against threats.
+
+`Improved Compliance` Easier audits and regulatory alignment (e.g., PCI-DSS, HIPAA).
+
+`Scalable` Adaptable to modern cloud-native environments.
+
+`Consistent` Applied across all development stages.
+
 
