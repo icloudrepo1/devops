@@ -30,3 +30,8 @@ what is deployment ?
 
 
 what is k8s volume ?
+
+
+what is k8s configmap ?
+
+what is k8s secret ?
