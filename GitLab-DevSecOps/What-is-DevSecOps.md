@@ -1,4 +1,5 @@
 ## What is DevSecOps ?
+============================
 
 DevSecOps stands for Development, Security, and Operations. 
 
@@ -109,4 +110,15 @@ DevSecOps helps overcome this by ensuring security is :-
 
 `Consistent` Applied across all development stages.
 
+
+
+## Traditional DevOps vs. DevSecOps
+=========================================
+
+
+```
+`DevOps :-` Let’s release software faster and more reliably.
+
+`DevSecOps :-` Let’s release software faster, more reliably, and securely.
+```
 
