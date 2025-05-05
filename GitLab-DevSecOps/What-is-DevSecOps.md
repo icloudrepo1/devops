@@ -135,3 +135,61 @@ DevSecOps helps overcome this by ensuring security is :-
 | **Culture**            | Dev and Ops collaboration                              | Dev, Sec, and Ops collaboration (“security is everyone’s job”)  |
 
 
+
+
+## What is Shift-Left Security ?
+======================================
+
+
+Shift-left security is a principle in DevSecOps that emphasizes moving security checks earlier in the software development lifecycle—to the "left" on a timeline of development stages.
+
+
+### Why Shift Left ?
+
+
+`Fixing bugs early` = cheaper and easier, A bug found during development might cost $100 to fix. Found in production? $10,000+.
+
+`Faster Delivery` = Fewer last-minute blockers = faster releases.
+
+`Security Ownership` = Developers and testers are equipped to detect and resolve issues themselves.
+
+
+### Common Shift-Left Security Practices
+
+
+Static Application Security Testing (SAST) in CI/CD 
+
+Software Composition Analysis (SCA)
+
+
+## Challenges of DevSecOps
+================================
+
+
+`Cultural Resistance`
+
+Shifting security responsibility to development teams can face pushback or resistance, especially in traditional organizations.
+
+`Skills Gap`
+
+Developers may not have the necessary security knowledge, and security teams may lack development experience.
+
+`Tool Overload & Integration Issues`
+
+Integrating multiple security tools into CI/CD pipelines can be complex and require maintenance.
+
+`False Positives`
+
+Automated tools can produce excessive or inaccurate alerts, slowing down teams and reducing trust in tools.
+
+`Process Complexity`
+
+Implementing DevSecOps involves changes in processes, policies, tooling, and team structures.
+
+`Initial Time & Resource Investment`
+
+It takes time to train teams, set up secure CI/CD pipelines, and define governance policies.
+
+`Measuring Success`
+
+It can be difficult to define and measure KPIs for security improvements, especially early on.
