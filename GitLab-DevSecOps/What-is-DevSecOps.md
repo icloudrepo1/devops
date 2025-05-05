@@ -121,7 +121,6 @@ DevSecOps helps overcome this by ensuring security is :-
 `DevSecOps :- Let’s release software faster, more reliably, and securely.`
 
 
-```
 
 | Aspect                 | **DevOps**                                             | **DevSecOps**                                                   |
 | ---------------------- | ------------------------------------------------------ | --------------------------------------------------------------- |
@@ -135,4 +134,4 @@ DevSecOps helps overcome this by ensuring security is :-
 | **Compliance**         | Typically manual, after-the-fact                       | Automated and continuous                                        |
 | **Culture**            | Dev and Ops collaboration                              | Dev, Sec, and Ops collaboration (“security is everyone’s job”)  |
 
-```
+
