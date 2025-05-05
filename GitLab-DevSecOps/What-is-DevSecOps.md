@@ -116,9 +116,8 @@ DevSecOps helps overcome this by ensuring security is :-
 =========================================
 
 
-```
-`DevOps :-` Let’s release software faster and more reliably.
+`DevOps :- Let’s release software faster and more reliably.`
 
-`DevSecOps :-` Let’s release software faster, more reliably, and securely.
-```
+`DevSecOps :- Let’s release software faster, more reliably, and securely.`
+
 
