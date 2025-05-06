@@ -661,4 +661,18 @@ pages:
 ```
 
 
+`Step 4 :- Wait for GitLab CI/CD to Deploy`
+
+  - Go to your project in GitLab
+  - Click on CI/CD > Pipelines
+  ( You should see a list of pipeline runs. A successful pipeline will display a green checkmark )
+  - 
+
+`Step 5 :- Access it`
+
+  - In your project, go to Deploy > Pages
+  - You'll find the URL to your live site
+
+=========END=============
+
 ===========END=========================
