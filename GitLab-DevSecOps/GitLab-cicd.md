@@ -602,4 +602,63 @@ GitLab UI (CI/CD settings)
 Group/project level
 
 
+## Host a webapp using pipeline
+=====================================
+
+
+`Step 1 :- Create Your GitLab Project`
+
+  - Go to https://gitlab.com.
+  - Create a new project
+  - Name it = e.g., my-webapp-repo
+  - Visibility = set to Public if you want your site accessible to everyone.
+
+
+`Step 2 :- Add Your Web Files in a public/ Folder`
+
+  - Create a folder named public
+  - Inside folder(Public)
+  - create index.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mywebapp-25</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Hello i am GitLab-webapp!</h1>
+</body>
+</html>
+```
+
+  - create style.css
+
+
+```
+body {
+  background-color: #e0f7fa;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+```
+
+`Step 3 :- Create .gitlab-ci.yml`
+
+```
+pages:
+  stage: deploy
+  script:
+    - echo "Deploying to GitLab Pages"
+  artifacts:
+    paths:
+      - public
+  only:
+    - main  # or 'master' depending on your branch
+```
+
+
 ===========END=========================
