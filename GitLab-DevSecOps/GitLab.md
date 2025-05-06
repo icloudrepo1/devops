@@ -17,8 +17,8 @@ GitLab combines the ability to :-
  - Collaborate through code reviews and project planning tools
  - Integrate DevOps tools for CI/CD, security, and monitoring
 
-## components of GitLab
-===============================
+### components of GitLab
+
 
 
 #### 1. Version Control
@@ -77,8 +77,8 @@ GitLab integrates with a wide range of tools and services like Slack, Kubernetes
 
 
 
-## Why Use GitLab ?
-==========================
+### Why Use GitLab ?
+
 
 
 `All-in-one platform` GitLab offers a comprehensive suite of tools that cover all stages of the software development lifecycle.
@@ -92,5 +92,115 @@ GitLab integrates with a wide range of tools and services like Slack, Kubernetes
 
 `GitLab is a powerful, all-in-one platform for managing software development projects, providing a full set of tools for version control, collaboration, CI/CD, security, and more.`
 
+
+
+## GitLab Premium/Ultimate vs. Free tiers
+===============================================
+
+
+Free Tier is great for individuals, hobby projects, or simple CI/CD workflows.
+
+Premium Tier targets teams needing collaboration tools, pipeline flexibility, and moderate security.
+
+Ultimate Tier is designed for enterprises with strict security, compliance, and governance requirements—especially for full DevSecOps.
+
+
+
+## GitLab Install
+======================
+
+
+To install and set up GitLab, you can choose between:
+
+ - GitLab.com (cloud-hosted) – No setup required, just sign up.
+ - Self-managed GitLab (self-hosted) – You install it on your server (e.g., Ubuntu, CentOS, or Docker).
+
+
+
+`cloud-hosted :- Use GitLab.com (Recommended for Most Users)`
+
+##### Steps :-
+
+Go to https://gitlab.com
+
+Click "Register" and create an account.
+
+Create a new project/repository.
+
+Start using GitLab’s features (repository, issues, CI/CD, etc.).
+
+
+`self-hosted`
+
+##### Steps :-
+
+##### 1. Update Your System
+
+```
+sudo apt update
+sudo apt upgrade
+```
+
+##### 2. Install Dependencies
+
+```
+sudo apt install -y curl openssh-server ca-certificates
+```
+
+##### 3. Install Postfix (Optional)
+
+```
+sudo apt install -y postfix
+```
+
+##### 4. Download and Install GitLab
+
+```
+curl https://packages.gitlab.com/gpg.key | sudo apt-key add -
+```
+
+##### 5. Add the GitLab repository
+
+```
+sudo sh -c 'echo "deb https://packages.gitlab.com/gitlab/gitlab-ce/ubuntu/ $(lsb_release -c | awk "{print $2}") main" > /etc/apt/sources.list.d/gitlab_gitlab-ce.list'
+```
+
+##### 6. Update the package list again
+
+```
+sudo apt update
+```
+
+##### 7. Now, install GitLab Community Edition
+
+```
+sudo apt install -y gitlab-ce
+```
+
+##### 8. Configure GitLab
+
+```
+sudo gitlab-ctl reconfigure
+```
+
+##### 9. Access GitLab
+
+Once the configuration is complete, open your web browser and navigate to the server’s IP address or domain name.
+
+If you’re using the IP address, it will look something like `http://<your-server-ip>/`
+
+You should see the GitLab setup page. The default login is:
+
+  - `Username: root`
+
+  - Password: The password was set during installation or can be found in
+
+    ```
+    sudo cat /etc/gitlab/initial_root_password
+    ```
+
+##### 10. Set Up GitLab
+
+Once logged in, you can change the root password and configure GitLab further.
 
 
