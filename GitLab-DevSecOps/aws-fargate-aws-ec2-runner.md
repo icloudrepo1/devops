@@ -62,6 +62,7 @@ create task defination  = Create task definition with JSON
 }
 ```
 
+( Replace: <REGISTRATION_TOKEN> with your actual token )
 
 
 ##### 4. Run the Registration Command
