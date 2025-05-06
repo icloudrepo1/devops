@@ -37,6 +37,32 @@ save the token
 
 ##### 3. create ECS cluster and fargate task defination
 
+Go to ECS  ->  create cluster  ->  choose aws fargate as launch type
+
+create task defination  = Create task definition with JSON
+
+```
+{
+  "family": "gitlab-runner",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "containerDefinitions": [
+    {
+      "name": "gitlab-runner",
+      "image": "gitlab/gitlab-runner:latest",
+      "essential": true,
+      "environment": [
+        { "name": "REGISTRATION_TOKEN", "value": "<Your Runner Token>" },
+        { "name": "CI_SERVER_URL", "value": "https://gitlab.com/" }
+      ]
+    }
+  ]
+}
+```
+
+
 
 ##### 4. Run the Registration Command
 
