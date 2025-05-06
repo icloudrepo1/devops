@@ -18,3 +18,6 @@ GitLab CI/CD
 
    - CI/CD Pipeline Basics
    - YAML syntax for .gitlab-ci.yml
+   - GitLab CI/CD Components
+   - Creating secure pipelines
+   - Host a webapp using pipeline
