@@ -85,7 +85,7 @@ If everything is right, GitLab will say :-
 
 `Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!`
 
-##### Start the Runner (if needed)
+##### Start the Runner (if needed)-optional
 
 ```
 sudo docker run -d --name gitlab-runner \
