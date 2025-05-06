@@ -7,7 +7,7 @@ What is DevSecOps ?
    - Shift-left security approach
    - Challenges
 
-Introduction to GitLab and its CI/CD features
+Introduction to GitLab
  
    - GitLab Premium/Ultimate vs. Free tiers
    - Install
