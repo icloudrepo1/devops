@@ -88,7 +88,7 @@ If everything is right, GitLab will say :-
 ##### Start the Runner (if needed)
 
 ```
-docker run -d --name gitlab-runner \
+sudo docker run -d --name gitlab-runner \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
   gitlab/gitlab-runner
