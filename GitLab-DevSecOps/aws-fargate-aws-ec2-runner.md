@@ -67,7 +67,7 @@ create task defination  = Create task definition with JSON
 
 ##### 4. Run the Registration Command
 
-Copy and paste the following command into your terminal.
+Now, open your terminal and run this full command
 
 ```
 docker run --rm -it gitlab/gitlab-runner register \
