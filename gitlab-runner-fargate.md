@@ -12,7 +12,7 @@ sudo systemctl enable docker
 
 #### 2. Create a gitlab personal access token
 
-Go to Project(fargate-proj) :- Settings > CI/CD > Runners > New project runner
+Go to Project(my-fargate-container) :- Settings > CI/CD > Runners > New project runner
 
 Tags = mynewtoken1  >  Create Runner
 
