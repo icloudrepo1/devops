@@ -237,15 +237,6 @@ In GitLab CI/CD, jobs are the individual tasks that run within each stage of you
 
 A job can be anything from running tests to building your site or deploying code.
 
-Includes:
-
-script: Commands to execute
-
-stage: Which stage it belongs to
-
-only/except, rules: When to run
-
-
 `Basic Job Structure`
 
 ```
@@ -296,6 +287,69 @@ unit_tests:
 | `rules`           | More flexible job conditions than `only/except`.                  |
 | `when`            | When the job should run (e.g., `on_success`, `manual`, `always`). |
 | `allow_failure`   | Let the pipeline continue even if this job fails.                 |
+
+
+### Runners
+
+In GitLab CI/CD, a runner is the agent (or server) that executes your pipeline jobs. 
+
+Runners are what actually run the scripts defined in your .gitlab-ci.yml file.
+
+`Types`
+
+1. Shared Runners
+-----------------------
+   
+Managed by GitLab (especially on GitLab.com).
+
+Automatically available to all projects.
+
+Great for general-purpose CI/CD needs.
+
+
+2. Specific Runners
+------------------------
+
+Installed and configured by you.
+
+Registered to a specific project or group.
+
+Useful when you need :
+
+   - Custom dependencies
+   - Access to internal resources (e.g., databases, servers)
+   - Faster execution
+
+`Runner Executors`
+
+
+Each runner uses an executor to run jobs. 
+
+ - shell : Runs directly on the host machine shell
+ - docker : Spins up a Docker container for each job
+ - docker+machine : Automatically provisions Docker machines
+ - kubernetes : Uses a Kubernetes cluster to run jobs
+ - virtualbox, ssh, etc. (less common)
+
+
+`Registering a GitLab Runner`
+
+Install GitLab Runner on your server :- sudo apt install gitlab-runner
+
+Register it :- gitlab-runner register
+
+You'll be prompted for :
+
+ - GitLab URL
+ - Registration token (from GitLab UI under Settings → CI/CD → Runners)
+ - Executor (e.g., docker, shell, etc.)
+
+
+`View and Manage Runners`
+
+Go to your GitLab project :- Settings → CI/CD → Runners
+
+
 
 
 
