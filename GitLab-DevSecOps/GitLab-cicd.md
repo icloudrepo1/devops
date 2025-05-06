@@ -553,14 +553,14 @@ How to Use Triggers :-
 
 Create a Trigger = Go to your project → Settings → CI/CD → Pipeline triggers , Add a trigger and copy the token.
 
-  - In .gitlab-ci.yml (optional)
-    ```
-  trigger_deploy:
+In .gitlab-ci.yml (optional)
+```
+trigger_deploy:
   stage: deploy
   trigger:
     project: other/project
     branch: main
-    ```
+```
 
 
 `Schedules`
@@ -581,7 +581,13 @@ How to Set Up a Schedule :-
 Go to your project → CI/CD → Schedules , Click “New schedule” , Set: Cron format (0 3 * * * → daily at 3am) , Branch , Optional variables
 
 
-
+```
+nightly_job:
+  script:
+    - echo "Running nightly task..."
+  only:
+    - schedules
+```
 
 ### Variables
 
