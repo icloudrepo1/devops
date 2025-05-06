@@ -187,6 +187,47 @@ deploy_job:
     - main
 ```
 
+### Stages
+
+In GitLab CI/CD, stages define the sequential phases of your pipeline. 
+
+Each stage can contain one or more jobs, and jobs in the same stage run in parallel. 
+
+The stages themselves run in order, one after another.
+
+Logical groupings of jobs (e.g., build, test, deploy).
+
+You must define all stages in the stages :- block at the top.
+
+If you skip declaring stages, GitLab uses a default : build, test, deploy.
+
+Jobs without a stage : tag default to the test stage.
+
+`Basic Structure of Stages`
+
+```
+stages:
+  - build
+  - test
+  - deploy
+```
+
+
+build :- Compile code or generate static files.
+
+test :- Run unit tests, linting, or other checks.
+
+deploy :- Push to a server, cloud provider, or GitLab Pages.
+
+
+
+`How it Executes`
+
+install_dependencies runs first.
+
+If it succeeds, run_tests runs.
+
+If that succeeds and the commit is on the main branch, deploy_site runs.
 
 
 ===========END=========================
