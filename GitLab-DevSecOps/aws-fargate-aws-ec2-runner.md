@@ -38,7 +38,7 @@ save the token
 ##### 3. create ECS cluster and fargate task defination
 
 
-#### 4. Run the Registration Command
+##### 4. Run the Registration Command
 
 Copy and paste the following command into your terminal.
 
