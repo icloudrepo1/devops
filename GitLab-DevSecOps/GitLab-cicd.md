@@ -1,26 +1,15 @@
-## GitLab CI/CD
-======================
+## GitLab CI/CD Pipeline Basics
+====================================
 
 GitLab CI/CD is a built-in continuous integration and continuous deployment system. 
 
 It’s tightly integrated into the GitLab platform and configured through a single YAML file in your repository.
 
-It automates :-
+A CI/CD pipeline is an automated sequence of steps that takes code from version control and It automates :-
 
  - Building your application
  - Testing it for bugs or security issues
  - Deploying it to production or staging environments
-
-
-
-### CI/CD Pipeline Basics
-
-
-A CI/CD pipeline is an automated sequence of steps that takes code from version control and :-
-
- - Builds it
- - Tests it
- - Deploys it
 
 This process reduces manual work and helps teams deliver reliable software faster.
 
