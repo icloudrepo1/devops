@@ -1,4 +1,4 @@
-## steps :-
+## steps :- Inside the docker only
 
 
 #### 1. Install Docker
@@ -93,3 +93,35 @@ sudo docker run -d --name gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
   gitlab/gitlab-runner
 ```
+
+
+
+===========End=================
+
+
+
+## steps :- AWS Fargate-based job execution
+
+
+#### 1. Set Up AWS IAM for GitLab Runner (Fargate)
+
+Go to IAM > Roles > Create role in the AWS Console.
+
+Choose Trusted entity :- AWS Service
+
+Use case :- Elastic Container Service
+
+Select Elastic Container Service Task > Next
+
+Attach permissions :- 
+
+`AmazonECSTaskExecutionRolePolicy` (for Fargate to pull images, send logs, etc.)
+
+`AmazonS3FullAccess` (optional for artifacts/logs)
+
+`AmazonEC2ContainerRegistryReadOnly` (for ECR images)
+
+
+
+
+
