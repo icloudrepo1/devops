@@ -13,3 +13,8 @@ Introduction to GitLab
    - Install
        - cloud-hosted
        - self-hosted
+
+GitLab CI/CD
+
+   - CI/CD Pipeline Basics
+   - YAML syntax for .gitlab-ci.yml
