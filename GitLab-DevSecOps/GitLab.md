@@ -204,3 +204,4 @@ You should see the GitLab setup page. The default login is:
 Once logged in, you can change the root password and configure GitLab further.
 
 
+================END===================
