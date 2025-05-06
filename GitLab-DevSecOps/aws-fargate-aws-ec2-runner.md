@@ -1,16 +1,6 @@
 ## Gitlab runner on aws-fargate setup
 ==========================================
 
-#### Prerequisites :-
-
-GitLab project or self-managed GitLab instance
-
-AWS account with permission to create ECS, IAM roles, and VPC resources
-
-AWS CLI configured
-
-Docker installed (for building your GitLab Runner container image)
-
 
 #### Step-by-Step Setup :-
 
@@ -66,6 +56,14 @@ create task defination  = Create task definition with JSON
 
 
 ##### 4. Run the Registration Command
+
+install GitLab Runner on your system first
+
+```
+sudo curl -L --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
+sudo chmod +x /usr/local/bin/gitlab-runner
+gitlab-runner --version
+```
 
 Now, open your terminal and run this full command
 
