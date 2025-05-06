@@ -63,6 +63,8 @@ List of pipeline phases (in execution order)
 
 These are the major phases in your pipeline.
 
+EX-
+
 ```
 stages:
   - build
@@ -73,6 +75,16 @@ stages:
 2. Jobs
    
 
+A job is a single task executed by the GitLab Runner. 
+
+It can be anything from running tests, building a binary, deploying code, etc.
+
+Each job has :-
+
+ - A name (identifier)
+ - A script (what it runs)
+ - Optional rules, only/except, artifacts, dependencies, etc.
+
 Each job runs scripts within a stage. Jobs in the same stage run in parallel; stages run in order.   
 
 Tasks that run in each stage, such as :-
@@ -81,6 +93,27 @@ Tasks that run in each stage, such as :-
  - Running unit tests
  - Deploying to a server
 
+EX-
+
+```
+test-job:
+  script:
+    - echo "Running tests"
+```
+
+Then assign jobs to stages :-
+
+EX-
+
+```
+build-job:
+  stage: build
+  script: echo "Building"
+
+test-job:
+  stage: test
+  script: echo "Testing"
+```
 
 3. Scripts
    
