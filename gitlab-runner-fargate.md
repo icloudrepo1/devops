@@ -65,7 +65,7 @@ gitlab-runner --version
 Now, open your terminal and run this full command
 
 ```
-docker run --rm -it gitlab/gitlab-runner register \
+sudo docker run --rm -it gitlab/gitlab-runner register \
   --non-interactive \
   --url "https://gitlab.com/" \
   --registration-token "<REGISTRATION_TOKEN>" \
@@ -80,3 +80,16 @@ docker run --rm -it gitlab/gitlab-runner register \
 ( Replace: <REGISTRATION_TOKEN> with your actual token )
 
 This will register the runner with GitLab using Docker as the execution environment.
+
+If everything is right, GitLab will say :- 
+
+`Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!`
+
+##### Start the Runner (if needed)
+
+```
+docker run -d --name gitlab-runner \
+  -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  gitlab/gitlab-runner
+```
