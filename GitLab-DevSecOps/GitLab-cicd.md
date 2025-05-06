@@ -36,4 +36,157 @@ CD (Continuous Deployment)	= Code is automatically deployed to users once tests 
 9. Triggers & Schedules
 10. Variables
 
+
+## Basic YAML Syntax for .gitlab-ci.yml
+=========================================
+
+
+```
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  NODE_ENV: production
+
+build_job:
+  stage: build
+  script:
+    - echo "Installing dependencies"
+    - npm install
+    - echo "Building project"
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+test_job:
+  stage: test
+  script:
+    - npm test
+  dependencies:
+    - build_job
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying application"
+  only:
+    - main
+```
+
+
+## GitLab CI/CD Components
+================================
+
+
+GitLab CI/CD is a powerful continuous integration and continuous deployment system built into GitLab. 
+
+It automates the process of building, testing, and deploying code. 
+
+Here are the key components of GitLab CI/CD :-
+
+
+### .gitlab-ci.yml File
+
+A `.gitlab-ci.yml` file is used to define the CI/CD pipeline configuration for a project in GitLab. 
+
+It specifies how GitLab should run tests, build, and deploy your code when changes are pushed to the repository.
+
+Location :- Root of your repository.
+
+Contents :- Jobs, stages, scripts, conditions, and other configurations.
+
+Example of a .gitlab-ci.yml file for a Node.js project :-
+
+```
+stages:
+  - install
+  - test
+  - deploy
+
+install_dependencies:
+  stage: install
+  image: node:18
+  script:
+    - npm install
+
+test:
+  stage: test
+  image: node:18
+  script:
+    - npm run test
+
+deploy:
+  stage: deploy
+  image: node:18
+  script:
+    - echo "Deploying application..."
+    # your deployment script here
+  only:
+    - main  # deploy only when changes are pushed to the main branch
+```
+
+### Pipelines
+
+A collection of stages and jobs defined in the .gitlab-ci.yml file.
+
+A pipeline is a series of stages, and each stage contains one or more jobs. Jobs are executed in the order defined by the stages.
+
+Trigger :-  On events like push, merge request, or manual action.
+
+Status :-  Can be passed, failed, canceled, or skipped.
+
+
+`How Pipelines Work`
+
+A pipeline is triggered when :-
+
+  - Code is pushed
+  - A merge request is created
+  - Manually from the UI
+
+Execution :- Each job runs in a fresh environment (like a Docker container).
+
+Artifacts :- Jobs can pass files (like compiled assets) between stages.
+
+
+`Viewing Pipelines`
+
+In GitLab, you can view pipelines under :-
+
+  - Project → CI/CD → Pipelines
+  - Each pipeline will show = Status (passed, failed), Duration and Jobs and logs
+
+
+Example Pipeline :-
+
+```
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Building project..."
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - exit 0  # simulate success
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying to production..."
+  only:
+    - main
+```
+
+
+
 ===========END=========================
