@@ -666,13 +666,13 @@ pages:
   - Go to your project in GitLab
   - Click on Build > Pipelines
   ( You should see a list of pipeline runs. A successful pipeline will display a green checkmark )
-  - 
+
 
 `Step 5 :- Access it`
 
   - In your project, go to Deploy > Pages
   - You'll find the URL to your live site
 
-=========END=============
+
 
 ===========END=========================
