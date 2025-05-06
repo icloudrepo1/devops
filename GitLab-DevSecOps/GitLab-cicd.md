@@ -230,4 +230,73 @@ If it succeeds, run_tests runs.
 If that succeeds and the commit is on the main branch, deploy_site runs.
 
 
+
+### Jobs
+
+In GitLab CI/CD, jobs are the individual tasks that run within each stage of your pipeline. 
+
+A job can be anything from running tests to building your site or deploying code.
+
+Includes:
+
+script: Commands to execute
+
+stage: Which stage it belongs to
+
+only/except, rules: When to run
+
+
+`Basic Job Structure`
+
+```
+job_name:
+  stage: stage_name
+  script:
+    - command 1
+    - command 2
+```
+
+job_name : Unique identifier for the job.
+
+stage : Specifies which stage the job belongs to.
+
+script : List of shell commands to execute.
+
+
+`Example`
+
+
+```
+stages:
+  - build
+  - test
+
+build_app:
+  stage: build
+  script:
+    - echo "Building app..."
+
+unit_tests:
+  stage: test
+  script:
+    - echo "Running tests..."
+```
+
+`Useful Job Options`
+
+
+| Option            | Description                                                       |
+| ----------------- | ----------------------------------------------------------------- |
+| `script`          | Commands the job runs.                                            |
+| `stage`           | Which pipeline stage the job is in.                               |
+| `only` / `except` | Run this job **only** on certain branches or conditions.          |
+| `artifacts`       | Save files from a job to pass to later jobs.                      |
+| `dependencies`    | Define which previous jobs this one relies on for artifacts.      |
+| `tags`            | Use when running on specific GitLab runners with tags.            |
+| `rules`           | More flexible job conditions than `only/except`.                  |
+| `when`            | When the job should run (e.g., `on_success`, `manual`, `always`). |
+| `allow_failure`   | Let the pipeline continue even if this job fails.                 |
+
+
+
 ===========END=========================
