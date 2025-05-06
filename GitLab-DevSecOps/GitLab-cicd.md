@@ -664,7 +664,7 @@ pages:
 `Step 4 :- Wait for GitLab CI/CD to Deploy`
 
   - Go to your project in GitLab
-  - Click on CI/CD > Pipelines
+  - Click on Build > Pipelines
   ( You should see a list of pipeline runs. A successful pipeline will display a green checkmark )
   - 
 
