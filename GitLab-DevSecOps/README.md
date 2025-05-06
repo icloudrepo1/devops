@@ -9,4 +9,4 @@ What is DevSecOps ?
 
 Introduction to GitLab and its CI/CD features
  
-   - Traditional DevOps vs. DevSecOps
+   - GitLab Premium/Ultimate vs. Free tiers
