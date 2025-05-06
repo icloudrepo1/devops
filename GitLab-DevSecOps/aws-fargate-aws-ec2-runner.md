@@ -83,6 +83,9 @@ docker run --rm -it gitlab/gitlab-runner register \
 
 ( Replace: <REGISTRATION_TOKEN> with your actual token )
 
+This will register the runner with GitLab using Docker as the execution environment.
+
+
 
 ## gitlab runner on aws ec2 instance setup
 ================================================
