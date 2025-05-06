@@ -10,3 +10,6 @@ What is DevSecOps ?
 Introduction to GitLab and its CI/CD features
  
    - GitLab Premium/Ultimate vs. Free tiers
+   - Install
+       - cloud-hosted
+       - self-hosted
