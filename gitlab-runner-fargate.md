@@ -14,7 +14,7 @@ sudo systemctl enable docker
 
 Go to Project(my-fargate-container) :- Settings > CI/CD > Runners > New project runner
 
-Tags = mynewtoken1  >  Create Runner
+Tags = fargate  >  Create Runner
 
 Register runner = Linux
 
