@@ -89,12 +89,32 @@ If everything is right, GitLab will say :-
 
 ```
 sudo docker run -d --name gitlab-runner \
+  --restart always \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  gitlab/gitlab-runner
+  gitlab/gitlab-runner:latest
+
 ```
 
+#### 5. Check if It's Registered and Running
 
+```
+sudo docker exec -it gitlab-runner gitlab-runner list
+```
+
+#### 6. Test with a Sample Pipeline
+
+Create a .gitlab-ci.yml in your GitLab repo
+
+```
+docker-test-job:
+  tags:
+    - fargate
+  script:
+    - echo "Hello from inside Docker Runner!"
+```
+
+Now the runner will pick up this job.
 
 ===========End=================
 
