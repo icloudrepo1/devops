@@ -23,7 +23,7 @@ curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/s
 Install the latest version of GitLab Runner
 
 ```
-sudo apt install gitlab-runner
+sudo apt install gitlab-runner -y
 ```
 
 ```
