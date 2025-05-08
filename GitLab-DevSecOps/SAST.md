@@ -1,5 +1,5 @@
 ## What is SAST ?
-========================
+==========================
 
 
 Static Application Security Testing (SAST) in GitLab is a built-in feature that automatically scans your source code for security vulnerabilities. 
