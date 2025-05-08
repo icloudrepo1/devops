@@ -1,5 +1,5 @@
 ## What is DAST ?
-========================
+==========================
 
 DAST stands for Dynamic Application Security Testing.
 
