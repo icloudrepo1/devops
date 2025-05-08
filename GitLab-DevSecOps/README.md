@@ -1,4 +1,4 @@
-# GitLab DevSecOps Security
+# GitLab-DevSecOps
 
 
 What is DevSecOps ?
@@ -33,7 +33,6 @@ Dynamic Application Security Testing (DAST)
 
    - What is DAST ?
    - Configuring DAST with GitLab
-   - Target URLs and authentication
    - Analyzing DAST results
 
 Container & Infrastructure Scanning
