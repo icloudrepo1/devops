@@ -180,4 +180,32 @@ Enable blocking on merge for unaddressed high-risk vulnerabilities (when feasibl
 
 ## TEST
 
----
+##### test-1 :- python code based
+
+
+Go to your gitlab > create project repo = myproj1
+
+1. create `app.py`
+
+```
+# this is my python based application
+import os
+from flask import flask
+
+# this is flask based application
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello, all"
+
+if __name__ == "__main__":
+    app.run()
+```
+
+
+2. create `requirements.txt`
+
+```
+flask
+```
