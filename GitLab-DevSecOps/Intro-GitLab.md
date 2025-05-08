@@ -1,5 +1,5 @@
 ## Introduction to GitLab
-============================
+=============================
 
 
 GitLab is a web-based DevOps lifecycle tool. 
