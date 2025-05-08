@@ -180,12 +180,12 @@ Enable blocking on merge for unaddressed high-risk vulnerabilities (when feasibl
 
 ## TEST
 
-##### test-1 :- python code based
+### test-1 :- python code based
 
 
 Go to your gitlab > create project repo = myproj1
 
-1. create `app.py`
+##### 1. create `app.py`
 
 ```
 # this is my python based application
@@ -204,8 +204,42 @@ if __name__ == "__main__":
 ```
 
 
-2. create `requirements.txt`
+##### 2. create `requirements.txt`
 
 ```
 flask
 ```
+
+##### 3. create gitlab ci config file
+
+`.gitlab-ci.yml`
+
+```
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/user/application_security/secret_detection/pipeline/configure
+# Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings
+# Container Scanning customization: https://docs.gitlab.com/ee/user/application_security/container_scanning/#customizing-the-container-scanning-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
+stages:
+- test
+- sast
+
+include:
+- template: Security/SAST.gitlab-ci.yml
+```
+
+go to your gitlab repo
+
+click settings > ci/cd > pipelines
+
+( pipeline will run with a sast job , wait for it to finish )
+
+##### 4. To view sast report
+
+click security & compliance  > vulnerability report
+
+you can also click on CI/CD > jobs > sast to view logs
+
+( you can also download or view `gl-sast-report.json` from artifacts )
