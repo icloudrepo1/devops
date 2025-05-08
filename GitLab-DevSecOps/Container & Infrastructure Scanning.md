@@ -1,5 +1,5 @@
 ## Container Scanning using GitLab
-============================================
+=============================================
 
 Container scanning in GitLab is an important practice for ensuring that your containerized applications are secure. 
 
