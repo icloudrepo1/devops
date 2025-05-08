@@ -73,25 +73,4 @@ sudo systemctl status gitlab-runner
 create `.gitlab-ci.yml`
 
 
-
-
-## gitlab----aws-fargate---setup
-=====================================
-
-### 1. set-up aws-cli
-
-
-`https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html`
-
-```
-sudo apt update
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-aws --version
-```
-
-```
-aws configure
-```
-`NB :-` YOU HAVE TO GENERATE ACCESS AND SECRET ACCESS KEY
+==========END===========
